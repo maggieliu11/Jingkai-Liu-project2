@@ -1,8 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
@@ -20,41 +17,38 @@ body {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-  .board {
-      margin: 10px;
-      padding: 0;
-  }
-
-  .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-
-  .tile {
-      width: 30px;
-      height: 30px;
-      font-size: 14px;
-  }
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  text-align: center;
 }
 
-@media (min-width: 769px) {
-  .board {
-      display: inline-block;
-      padding: 10px;
-      border: 2px solid #333;
-      background-color: #ddd;
-  }
+.tile.revealed {
+  background-color: #e0e0e0;
+}  
 
-  .row {
-      display: flex;
-      justify-content: center;
-  }
+.board {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #333;
+  background-color: #ddd;
+}
 
-  .tile {
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
-  }
+.row {
+  display: flex;
+}
+
+.tile {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  user-select: none;
 }

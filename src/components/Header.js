@@ -22,12 +22,16 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Link to="/" className="btn btn-link">Home</Link>
-      <button onClick={() => handleDifficultyChange('easy')} className="btn">Easy</button>
-      <button onClick={() => handleDifficultyChange('medium')} className="btn">Medium</button>
-      <button onClick={() => handleDifficultyChange('hard')} className="btn">Hard</button>
-      <Link to="/rules" className="btn btn-link">Rules</Link>
-      <button onClick={handleReset} className="btn btn-reset">Reset</button>
+      <div className="left-buttons">
+        <Link to="/" className="btn btn-link">Home</Link>
+        <button onClick={() => handleDifficultyChange('easy')} className="btn">Easy</button>
+        <button onClick={() => handleDifficultyChange('medium')} className="btn">Medium</button>
+        <button onClick={() => handleDifficultyChange('hard')} className="btn">Hard</button>
+      </div>
+      <div className="right-buttons">
+        <Link to="/rules" className="btn btn-link">Rules</Link>
+        <button onClick={handleReset} className="btn btn-reset">Reset</button>
+      </div>
     </header>
   );
 };
